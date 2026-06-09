@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniTrade - Invista Melhor</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div id="app">
+        <header class="container py-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+                <div class="logo-icon text-white fw-bold d-flex align-items-center justify-content-center">UT</div>
+            </div>
+            <button @click="entrar" class="btn btn-primary rounded-pill px-4 fw-semibold shadow-sm">Entrar</button>
+        </header>
+
+        <main class="container text-center pt-5 pb-5 mt-4 max-w-custom">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                <div class="logo-icon-small text-white fw-bold d-flex align-items-center justify-content-center">UT</div>
+                <span class="fs-5 fw-bold text-dark">UniTrade</span>
+            </div>
+
+            <h1 class="display-4 fw-bolder mb-4 text-dark">
+                Invista melhor com <br>
+                <span class="text-gradient">orientação profissional</span>
+            </h1>
+
+            <p class="lead text-secondary mb-5 mx-auto" style="max-width: 700px;">
+                Conecte-se com assessores de investimentos certificados e receba recomendações financeiras personalizadas para o seu perfil.
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
+                <button 
+                    @click="comecar" 
+                    :class="['btn btn-lg px-5 rounded-3 fw-semibold shadow', btnCarregando ? 'btn-secondary disabled' : 'btn-primary']"
+                >
+                    {{ textoBotao }}
+                </button>
+                <button class="btn btn-light btn-lg px-5 rounded-3 fw-semibold border shadow-sm text-secondary">Ver Assessores</button>
+            </div>
+        </main>
+
+        <section class="container pb-5 mt-5">
+            <div class="row g-5 text-center">
+                <div v-for="item in funcionalidades" :key="item.titulo" class="col-12 col-md-4">
+                    <div class="feature-card">
+                        <div :class="['feature-icon shadow-sm', item.cor]">{{ item.icone }}</div>
+                        <h3 class="h5 fw-bold text-dark">{{ item.titulo }}</h3>
+                        <p class="text-secondary small">{{ item.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

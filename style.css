@@ -1,0 +1,66 @@
+/* Tipografia e cor de fundo global */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FAFAFA !important;
+}
+
+/* Largura máxima do texto central */
+.max-w-custom {
+    max-width: 900px;
+}
+
+/* Logo redonda */
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #a855f7);
+    font-size: 14px;
+}
+
+.logo-icon-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #a855f7);
+    font-size: 11px;
+}
+
+/* Efeito de Gradiente no Texto Principal */
+.text-gradient {
+    background: linear-gradient(90deg, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Botões Customizados */
+.btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8 !important;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Ícones dos Cards */
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 20px auto;
+    color: white;
+}
+
+.bg-blue-gradient { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.bg-purple-gradient { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+.bg-indigo-gradient { background: linear-gradient(135deg, #818cf8, #4f46e5); }
